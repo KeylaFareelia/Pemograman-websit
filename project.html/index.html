@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koperasi</title>
+    <link rel="stylesheet" href="css/style1.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navi">
+        <ul>
+            <li class="logo"><a href="#"><img src="./img/logo.png"></a></li>
+            <li><a href="#tools-catalog">Alat Tulis</a></li>
+            <li><a href="#dress-catalog">Seragam Sekolah</a></li>
+            <li><a href="#rent-catalog">Sewa Barang</a></li>
+            <li class="search"><input type="text" placeholder="Search.."></li>
+        </ul>
+    </nav>
+
+    <div class="icons">
+      <div class="fas fa-shopping-cart" id="cart-btn"></div>
+    </div>
+    
+     <!--Title-->
+     <section id="title" class="gradient-background">
+     <div class="container col-xxl-8 px-4 pt-2">
+            <div class="row flex-lg-row-reverse align-items-center g-5 pt-2">
+              <div class="col-10 col-sm-8 col-lg-6">
+                <img src="./img/koperasi.png" class="d-block mx-lg-auto img-fluid" alt="app demo" width="500" height="400" loading="lazy">
+              </div>
+              <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 mb-3">"Untuk Anda Kami Ada,Apapun Yang Kalian Butuhkan Selalu Tersedia".</h1>
+               
+                <div class="form-container">
+                  <form action="submit-email.php" method="POST">
+                    <input type="email" name="email" placeholder="Enter your email address" required>
+                    <input type="submit" value="Enter">
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+     </section>
+
+     <!--Slider-->
+     <section id="slider" class="container">
+        <div class="slider-container">
+            <div class="slider">
+                <img src="img/bukutulis.jpg" alt="Gambar 1">
+                <img src="img/pensil.jpg" alt="Gambar 2">
+                <img src="img/pensilwarna.jpg" alt="Gambar 3">
+                <img src="img/pulpenwarna.jpg" alt="Gambar 4">
+                <img src="img/bukugambar.jpg" alt="Gambar 5">
+                <img src="img/spidol.jpg" alt="Gambar 6">
+                <img src="img/bajumerah.jpg" alt="Gambar 7">
+                <img src="img/bajupramuka.jpg" alt="Gambar 8">
+                <img src="img/bajumuslim.jpg" alt="Gambar 9">
+                <img src="img/atributsd.jpg" alt="Gambar 10">
+                <img src="img/atributpramuka.jpg" alt="Gambar 11">
+                <img src="img/jilbab.jpg" alt="Gambar 12">
+            </div>
+            <!-- Navigasi Tombol -->
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    
+        <script>
+             let currentIndex = 0;
+            function moveSlide(direction) {
+                const slides = document.querySelectorAll('.slider img');
+                const totalSlides = slides.length;
+                currentIndex += direction;
+                if (currentIndex < 0) {
+                    currentIndex = totalSlides - 1;
+                } else if (currentIndex >= totalSlides) {
+                    currentIndex = 0;
+                }
+                const slider = document.querySelector('.slider');
+                slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+        </script>
+
+     <!--Features-->
+     <section id="tools-catalog" id="features">
+     <div class="catalog-container">
+      <h1>Katalog Produk Alat Tulis Koperasi Sekolah</h1>
+      
+      <div class="product-row">
+          <div class="product">
+              <img src="./img/bukutulis.jpg" alt="Buku Tulis">
+              <h3>Buku Tulis</h3>
+              <p>Rp.4.000/pcs</p>
+              <p>Buku tulis berbagai ukuran, ideal untuk mencatat pelajaran atau kegiatan sekolah.</p>
+          </div>
+          <div class="product">
+              <img src="./img/pensil.jpg" alt="Pensil">
+              <h3>Pensil</h3>
+              <p>Rp.3.000/pcs</p>
+              <p>Pensil berkualitas untuk mendukung kegiatan menulis.</p>
+          </div>
+          <div class="product">
+              <img src="./img/pensilwarna.jpg" alt="Pensil Warna">
+              <h3>Pensil Warna</h3>
+              <p>Rp.10.000/box</p>
+              <p>Pensil Warna dengan kualitas yang bagus dan tidak mudah patah saat dipakai.</p>
+          </div>
+      </div>
+      
+      <div class="product-row">
+          <div class="product">
+              <img src="./img/pulpenwarna.jpg" alt="Pulpen">
+              <h3>Pulpen</h3>
+              <p>Rp.4.000/pcs</p>
+              <p>Pulpen dengan kualitas yang sangat baik dan Tersedia dengan berbagai warna.</p>
+          </div>
+          <div class="product">
+              <img src="./img/bukugambar.jpg" alt="Buku Gmbar">
+              <h3>Buku Gambar</h3>
+              <p>Rp.6.000/pcs</p>
+              <p>Buku Gmbar yang Tersedia denga berbagai macam ukuran.</p>
+          </div>
+          <div class="product">
+              <img src="./img/spidol.jpg" alt="spidol">
+              <h3>Spidol</h3>
+              <p>Rp.5.000/pcs</p>
+              <p>Spidol Papan tulis yang berkualitas nyata.</p>
+          </div>
+      </div>
+    </div>
+     
+     </section>
+
+     <!--Katalog-->
+     <section id="dress-catalog" id="katalog">
+      <div class="catalog-container">
+        <h1>Katalog Produk Seragam Sekolah Koperasi Sekolah</h1>
+        
+        <div class="product-row">
+            <div class="product">
+                <img src="./img/bajumerah.jpg" alt="Buku Tulis">
+                <h3>Baju Merah Putih</h3>
+                <p>Rp.45.000</p>
+                <p>Seragam SD Merah Putih dengan bahan yang berkualitas dan tersedia berbagai ukuran.</p>
+            </div>
+            <div class="product">
+                <img src="./img/bajupramuka.jpg" alt="Pensil">
+                <h3>Baju Pramuka</h3>
+                <p>Rp.120.000</p>
+                <p>Baju Pramuka dengan kualitas yang bagus dan tersedia dengan berbagai ukuran.</p>
+            </div>
+            <div class="product">
+                <img src="./img/bajumuslim.jpg" alt="Pensil Warna">
+                <h3>Baju Muslim</h3>
+                <p>Rp.84.000</p>
+                <p>Baju Muslim dengan bahan yang berkualitas dan tersedia dengan berbagai ukuran.</p>
+            </div>
+        </div>
+        
+        <div class="product-row">
+          <div class="product">
+              <img src="./img/atributsd.jpg" alt="Pulpen">
+              <h3>Atribut Baju Merah Putih</h3>
+              <p>Rp.30.000</p>
+              <p>1 Paket atribut SD sudah lengkap yaitu berisi topi,dasi dan bet bendera.</p>
+          </div>
+          <div class="product">
+              <img src="./img/atributpramuka.jpg" alt="Buku Gmbar">
+              <h3>Atribut Pramuka</h3>
+              <p>Rp.45.000</p>
+              <p>1 Paket atribut pramuka sudah lengkap yaitu berisi topi,kacu,ring dan tali tambang.</p>
+          </div>
+          <div class="product">
+              <img src="./img/jilbab.jpg" alt="spidol">
+              <h3>Jilbab Anak</h3>
+              <p>Rp.50.000</p>
+              <p>Jilbab anak model kepang ini menambahkan kesan manis, dan tersedia untuk berbagai macam seragam.</p>
+          </div>
+      </div>
+    </div>
+
+     </section>
+
+     <!--Katalog-->
+     <section id="rent-catalog" id="katalog">
+        <div class="catalog-container">
+            <h1>Katalog Produk Yang Dapat Disewakan</h1>
+            
+            <div class="product-row">
+                <div class="product">
+                    <img src="./img/bukupelajaran.jpg" alt="Buku Tulis">
+                    <h3>Baju Pelajaran</h3>
+                    <p>Buku Pelajaran ini dapat dipinjam pada saat murid belum mempunyai buku tersebut.</p>
+                </div>
+                <div class="product">
+                    <img src="./img/ruangbaca.jpg" alt="Pensil">
+                    <h3>Buku Cerita</h3>
+                    <p>Buku Cerita yang disediakan di koperasi sekolah dapat dipinjam untuk murid belajar baca ketika dirumah.</p>
+                </div>
+                <div class="product">
+                    <img src="./img/bola.jpg" alt="Pensil Warna">
+                    <h3>Bola</h3>
+                    <p>Bola tendang yang dapat dipinjam pada saat mata pelajaran PJOK saja dan sudah melalui peretujuan dari guru yang bertanggung jawab.</p>
+                </div>
+            </div>
+            
+            <div class="product-row">
+              <div class="product">
+                  <img src="./img/bolabasket.jpg" alt="Pulpen">
+                  <h3>Bola Basket</h3>
+                  <p>Bola Basket yang dapat dipinjam pada saat mata pelajaran PJOK saja dan sudah melalui persetujuan dari guru yang bertanggung jawab.</p>
+              </div>
+              <div class="product">
+                  <img src="./img/bolakasti.jpg" alt="Buku Gmbar">
+                  <h3>Bola Kasti</h3>
+                  <p>Bola Kasti yang dapat dipinjam pada saat mata pelajaran PJOK saja dan sudah melalui persetujuan dari guru yang bertanggung jawab .</p>
+              </div>
+              <div class="product">
+                  <img src="./img/alatmusik.jpg" alt="spidol">
+                  <h3>Alat Musik Tradisional</h3>
+                  <p>Alat Musik Tradisional yang dapat digunakan para murid pada saat mata pelajaran SBK.</p>
+              </div>
+          </div>
+        </div>
+     </section>
+
+      <!--Form-->
+      <section id="form">
+        <div class="container">
+            <h1>Form Pembelian Barang Koperasi Sekolah</h1>
+            <form action="#" method="post">
+                <label for="nama">Nama Pembeli:</label>
+                <input type="text" id="nama" name="nama" required>
+    
+                <label for="barang">Barang yang Dibeli:</label>
+                <select id="barang" name="barang" required>
+                    <option value="buku">Buku Tulis</option>
+                    <option value="pensil">Pensil</option>
+                    <option value="pensil-warna">Pensil Warna</option>
+                    <option value="pulpen">Pulpen</option>
+                    <option value="buku-gambar">Buku Gambar</option>
+                    <option value="spidol">Spidol</option>
+                    <option value="baju-merah-putih">Baju Merah Putih</option>
+                    <option value="baju-pramuka">Baju Pramuka</option>
+                    <option value="baju-muslim">Baju Muslim</option>
+                    <option value="atibut-sd-lengkap">Atribuk SD Lengkap</option>
+                    <option value="atribut-pramuka">Atribut Pramuka</option>
+                    <option value="jilbab">Jilbab</option>
+                </select>
+    
+                <label for="jumlah">Jumlah:</label>
+                <input type="number" id="jumlah" name="jumlah" min="1" required>
+    
+
+    
+                <button type="submit">Beli Barang</button>
+            </form>
+        </div>
+
+
+
+      </section>
+
+<!--Pengembang-->
+<section id="pengembang">
+    <div class="my-5">
+        <div class="p-5 text-center bg-body-tertiary">
+            <div class="container py-5">
+                <h2 class="text-body-emphasis">Founder Koperasi</h2>
+                <img class="profile-img mt-5" src="img/profile.jpg" alt="keyla">
+                <p class="col-lg-8 mx-auto lead mt-2">Saya Keyla Farrelia dari prodi Teknik Informatika angkatan 2024. Saya yang membuat landing page koperasi sekolah ini.
+                    Anak murid di sekolah ini menggunakan web ini untuk membeli keperluan sekolah mereka yang masih kurang ataupun untuk mereka
+                    menyewa beberapa barang yang ada disekolah ini, produk yang dijual di koperasi ini pun berkualitas sangat baik dan layanan di web ini masih akan terus berkembang agar para penggunanya
+                    pun dapat selalu nyaman saat mengaksesnya.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+     <!--Footer-->
+     <section id="footer">
+        <div>
+            <h1>Selamat Datang di Koperasi Sekolah</h1>
+            <h1>Temukan berbagai kebutuhan sekolah Anda di sini.</h1>
+        </div>
+    
+        <!-- Footer -->
+        <footer>
+            <h3>Koperasi Sekolah</h3>
+    
+            <ul class="footer-contact">
+                <li><strong>Alamat:</strong> 11, Jl. Gardu No.17, RT.10/RW.2, Srengseng Sawah, Kec. Jagakarsa, 
+                    Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 10550</li>
+                <li><strong>Email:</strong> koperasi@sekolah.com</li>
+                <li><strong>Telepon:</strong>  (021) 7873645</li>
+            </ul>
+    
+            <div class="social-icons">
+                <a href="https://www.instagram.com/sdn_ss15pg/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1200px-Instagram_logo_2022.svg.png" alt="Instagram" width="30">
+                </a>
+            </div>
+    
+            <p>&copy; 2024 Koperasi Sekolah. Semua hak dilindungi.</p>
+        </footer>
+     </section>
