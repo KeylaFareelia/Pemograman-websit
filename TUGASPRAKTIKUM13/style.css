@@ -1,0 +1,59 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: plum;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    background-color: purple; 
+}
+
+section {
+    padding: 60px 0;
+}
+
+footer {
+    background-color: plum;
+    color: white;
+}
+
+footer p {
+    margin: 0;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+}
+
+.card img {
+    border-radius: 10px;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: purple;
+    border-color: plum;
+}
+
+.btn-primary:hover {
+    background-color: purple;
+    border-color: plum;
+}
